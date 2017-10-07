@@ -11,6 +11,10 @@ class CashRegister
     @total += price * quantity
   end
 
+  def items
+
+  end
+
   def apply_discount
     if @discount != nil
       @total -= @total * @discount/100
