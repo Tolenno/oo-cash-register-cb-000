@@ -12,7 +12,7 @@ class CashRegister
   end
 
   def items
-
+    fill(title, items.size, quantity)
   end
 
   def apply_discount
