@@ -10,6 +10,7 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     @total += price * quantity
     self.items.fill(title, items.size, quantity)
+    @last_transaction = price * quantity
   end
 
   def apply_discount
@@ -22,6 +23,6 @@ class CashRegister
   end
 
   def void_last_transaction
-    @total = @last_transaction
+    @total -= @last_transaction
   end
 end
